@@ -82,4 +82,10 @@ Bottle Neck
 - subsampling is performed by convolutions with stride of 2
 - Network ends with a global average pooling, 10-way fully-connected layer and softmax
 - total 6n+2 staked weighted layers
--
+
+ResNet18 src : https://github.com/shshin1210/Undergraduate-research-student/blob/master/ResNet/ResNet18_Final.ipynb
+ResNet50 src : https://github.com/shshin1210/Undergraduate-research-student/blob/master/ResNet/ResNet50.ipynb
+More Info about ResNet : https://github.com/shshin1210/Undergraduate-research-student/blob/master/ResNet/ResNet.pdf
+
+VGGNet src : https://github.com/shshin1210/Undergraduate-research-student/blob/master/VGGNet/VGGnet_%EC%B5%9C%EC%A2%85%EB%B3%B8%20(1).ipynb
+More Info about VGGNet : https://github.com/shshin1210/Undergraduate-research-student/blob/master/VGGNet/VGGnet.pdf
