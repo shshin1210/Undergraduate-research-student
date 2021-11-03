@@ -83,6 +83,37 @@ Bottle Neck
 - Network ends with a global average pooling, 10-way fully-connected layer and softmax
 - total 6n+2 staked weighted layers
 
+
+## 3. MobileNetV2
+
+### Key features
+
+- Depthwise Separable Convolutions
+
+: This dramatically reduce the complexity cost and model size of the network, which is suitable to Mobile devices, or any devices with low computational power
+
+- Linear Bottlenecks
+
+- Inverted Residuals
+
+### 보완하고자 하는 것
+
+- 메모리 사용량의 감소와 네트워크 자체의 복잡성을 해결하고자 한다.
+
+- Inverted Residuals와 Linear Bottlenecks는 ReLU 함수를 거치게 되면 정보가 손실된다는 것에 영감을 받아 이를 최소화하기 위해 제안되었다. 
+
+- ReLU 함수를 사용할 때는 해당 레이어에 많은 채널 수를 사용하고, 해당 레이어에 채널 수가 적다면 선형 함수를 사용한다. 이것이 Inverted Residuals와 Linear Bottleneck의 등장 배경
+
+### Convolution Block structure
+
+conv 1x1, ReLU6 -> Dwise 3x3, ReLU6 -> conv 1x1, Linear
+
+- first layer : 1×1 convolution with ReLU6 (expansion layer)
+- second layer : depthwise convolution
+- third layer : another 1×1 convolution but without any non-linearity.
+
+
+
 ResNet18 src : https://github.com/shshin1210/Undergraduate-research-student/blob/master/ResNet/ResNet18_Final.ipynb
 
 ResNet50 src : https://github.com/shshin1210/Undergraduate-research-student/blob/master/ResNet/ResNet50.ipynb
